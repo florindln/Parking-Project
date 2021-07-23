@@ -1,0 +1,4 @@
+FROM azul/zulu-openjdk-alpine:11
+ARG JAR_FILE=target/javaanpr.jar
+COPY ${JAR_FILE} javaanpr.jar
+ENTRYPOINT ["java","-jar","/javaanpr.jar"]
